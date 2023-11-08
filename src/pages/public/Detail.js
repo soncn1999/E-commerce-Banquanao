@@ -65,7 +65,7 @@ function Detail(props) {
         <div>
             <Header />
             {/* <!-- Product section--> */}
-            <section class="py-5" style={{ paddingTop: '150px' }}>
+            <section class="" style={{ paddingTop: '150px' }}>
                 <div class="container px-4 px-lg-5 my-5">
                     <div class="row gx-4 gx-lg-5 align-items-center">
                         <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src={detailProduct.image?.length > 0 ? detailProduct?.image[0] : `https://dummyimage.com/450x300/dee2e6/6c757d.jpg`} alt="..." /></div>

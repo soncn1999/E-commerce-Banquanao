@@ -115,7 +115,9 @@ function Header(props) {
                     <ul className="header-main__user-submenu">
                         <li className="header-main__user-submenu-item" onClick={() => navigate(`/${path.LOGIN}`)} style={{ cursor: 'pointer' }}>Đăng nhập</li>
                         <li className="header-main__user-submenu-item" onClick={() => navigate(`/${path.REGISTER}`)} style={{ cursor: 'pointer' }}>Đăng Ký</li>
-                        <li className="header-main__user-submenu-item" onClick={() => navigate(`/${path.PRIVATE}`)} style={{ cursor: 'pointer' }}>Trang ADMIN</li>
+                        {
+                            userCurrent && userCurrent?.current?.role == 'admin' && <li className="header-main__user-submenu-item" onClick={() => navigate(`/${path.PRIVATE}`)} style={{ cursor: 'pointer' }}>Trang ADMIN</li>
+                        }
                         <li className="header-main__user-submenu-item" style={{ color: '#fa4a27' }} onClick={() => handleUserLogout()}>Đăng xuất</li>
                     </ul>
                 </div>

@@ -177,7 +177,13 @@ function Cart(props) {
                                     return (
                                         <div className="row border-top border-bottom" key={item._id}>
                                             <div className="row main align-Sản phẩm-center">
-                                                <div className="col-2"><img className="img-fluid" src='https://res.cloudinary.com/dlcbbkeia/image/upload/v1697985349/Cuahanglaptop/e8jeinmko3ayrn6tw6tf.jpg' /></div>
+                                                <div className="col-2">
+                                                    {
+                                                        item?.product?.image?.length > 0 ? <img className="img-fluid" src={item.product.image[0]} /> :
+                                                            <img className="img-fluid" src='https://dummyimage.com/450x300/dee2e6/6c757d.jpg' />
+                                                    }
+
+                                                </div>
                                                 <div className="col">
                                                     <div className="row text-muted">Màu sắc: {item.color}</div>
                                                     <div className="row">{item?.product?.title}</div>
