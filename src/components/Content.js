@@ -14,7 +14,7 @@ function Content(props) {
     const [listProduct, setListProduct] = useState({});
 
     useEffect(() => {
-        getAllProduct(3);
+        getAllProduct();
     }, []);
 
     const getAllProduct = async (page = 1) => {
